@@ -1,10 +1,10 @@
 #!/usr/bin/env python
 '''
-This program is a command line tool which
-compresses a text file using Huffman Encoding
-and writes a binary file. This tool also decodes
-the binary file using the huffman tree saved as json
-saved by this same program
+Copyright 2018 Suhird Singh (UWin License)
+This is an intellectual property
+Incase of any distribution rights, copywright, modification,
+please contact the author at Suhirdsingh92@gmail.com
+
 '''
 __author__ = 'Suhird Singh'
 
