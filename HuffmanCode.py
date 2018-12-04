@@ -66,7 +66,7 @@ def original_file_to_bin(data):
 def huffman_code_to_file(data,huff):
 	coded_bit_stream = ''.join(i[1] for char in data for i in huff if char == i[0])
 	padded_coded_text = pad_encoded_text(coded_bit_stream)
-	print(padded_coded_text)
+	#print(padded_coded_text)
 	coded_text_in_byte_form = _to_Bytes(padded_coded_text)
 	#print(coded_text_in_byte_form)
 	with open('Huffman_Encoded_file.bin','wb') as encoded_file:
@@ -84,7 +84,7 @@ def huffman_tree_to_file(huff):
 
 if __name__ == '__main__':
 	parser = ArgumentParser(description='Code to Compress/Extract a file.')
-	parser.add_argument('-a','--action',required=True,help='only 2 values encode and decode')
+	parser.add_argument('-a','--action',required=True,help='only 2 values(encode/decode)')
 	parser.add_argument('-f','--filename',required=True, help='original text filename')
 	parser.add_argument('-huff','--huffman',help = 'name of huffman tree file')
 	result = parser.parse_args()
@@ -101,10 +101,11 @@ if __name__ == '__main__':
 		#original_file_to_bin(data)
 		print('##Writing Encoded bit stream to Encoded bin file')
 		huffman_code_to_file(data,huff)
+		print('##Saving Huffman Tree to json file')
 		huffman_tree_to_file(huff)
 		#_o = os.path.getsize('Original_Bit_Form.bin')
 		_c = os.path.getsize('Huffman_Encoded_file.bin')
-		_t = os.path.getsize('test.txt')
+		_t = os.path.getsize(FILENAME)
 		#print(f'Original Binary File: {_o} bytes')
 		print(f'Original Text File:{_t} bytes')
 		print(f'Compressed Binary File: {_c} bytes')
