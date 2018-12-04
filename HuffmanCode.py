@@ -12,7 +12,7 @@ __author__ = 'Suhird Singh'
 import os, json,sys
 from collections import Counter
 from heapq import heapify, heappop, heappush
-from src.myownutils import _to_Bytes, pad_encoded_text, remove_padding
+from myownutils import _to_Bytes, pad_encoded_text, remove_padding
 from argparse import ArgumentParser
 #follwing libraries are 3rd party and needs to be installed
 from bitstring import BitArray
