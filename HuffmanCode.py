@@ -2,7 +2,7 @@
 '''
 Copyright 2018 Suhird Singh (UWin License)
 This is an intellectual property
-Incase of any distribution rights, copywright, modification,
+Incase of any distribution rights, copyright, modification,
 please contact the author at Suhirdsingh92@gmail.com
 
 '''
